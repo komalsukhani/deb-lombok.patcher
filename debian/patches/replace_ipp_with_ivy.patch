@@ -1,0 +1,34 @@
+Index: lombok.patcher/build.xml
+===================================================================
+--- lombok.patcher.orig/build.xml
++++ lombok.patcher/build.xml
+@@ -19,7 +19,7 @@
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+   THE SOFTWARE.
+ -->
+-<project name="lombok.patcher" default="dist" xmlns:ivy="antlib:com.zwitserloot.ivyplusplus">
++<project name="lombok.patcher" default="dist" xmlns:ivy="antlib:org.apache.ivy.ant">
+ 	<property name="ivy.retrieve.pattern" value="lib/[conf]/[artifact].[ext]" />
+ 	<available file="lib/ivyplusplus.jar" property="ivyplusplus.available" />
+ 	
+@@ -87,16 +87,16 @@
+ 	</target>
+ 	
+ 	<target name="compile" depends="unpackLibs, ensureBuildDeps" description="Compiles lombok.patcher" unless="pointless">
+-		<ivy:compile srcdir="src" destdir="build/pack" target="1.5" source="1.5">
++		<javac srcdir="src" destdir="build/pack" target="1.5" source="1.5">
+ 			<classpath refid="build.path" />
+-		</ivy:compile>
++		</javac>
+ 	</target>
+ 	
+ 	<target name="compileTests" depends="compile, ensureTestDeps" description="Compiles the unit tests" unless="skipTests">
+-		<ivy:compile srcdir="test" destdir="build/tests" target="1.5" source="1.5">
++		<javac srcdir="test" destdir="build/tests" target="1.5" source="1.5">
+ 			<classpath path="build/pack" />
+ 			<classpath refid="test.path" />
+-		</ivy:compile>
++		</javac>
+ 	</target>
+ 	
+ 	<target name="-test.quiet">

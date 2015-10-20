@@ -1,0 +1,5 @@
+lombok-patcher (01-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Komal Sukhani <komaldsukhani@gmail.com>  Sun, 16 Aug 2015 13:49:06 +0530

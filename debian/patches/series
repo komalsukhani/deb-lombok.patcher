@@ -1,0 +1,7 @@
+add_maven_repo.patch
+replace_ipp_with_ivy.patch
+remove_dependency_on_ensureipp.patch
+remove_missing_dependency.patch
+create_directories.patch
+add_hamcrest_to_cp.patch
+remove_for_now.patch

@@ -1,0 +1,22 @@
+Index: lombok.patcher/build.xml
+===================================================================
+--- lombok.patcher.orig/build.xml
++++ lombok.patcher/build.xml
+@@ -68,7 +68,7 @@
+ 		<delete dir=".settings" quiet="true" />
+ 	</target>
+ 	
+-	<target name="version" depends="ensure-ipp" description="Shows the version number.">
++	<target name="version" description="Shows the version number.">
+ 		<mkdir dir="build/pack" />
+ 		<javac srcdir="src" debug="on" destdir="build/pack" target="1.5" source="1.5" includes="lombok/patcher/Version.java" />
+ 		<java
+@@ -132,7 +132,7 @@
+ 		<copy file="dist/lombok.patcher-${lombok.patcher.version}.jar" tofile="dist/lombok.patcher.jar" />
+ 	</target>
+ 	
+-	<target name="config-ivy" depends="ensure-ipp">
++	<target name="config-ivy" >
+ 		<ivy:configure file="buildScripts/ivysettings.xml" />
+ 	</target>
+ 	

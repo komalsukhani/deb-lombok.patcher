@@ -1,0 +1,12 @@
+Index: lombok.patcher/build.xml
+===================================================================
+--- lombok.patcher.orig/build.xml
++++ lombok.patcher/build.xml
+@@ -76,7 +76,6 @@
+ 			classpath="build/pack"
+ 			failonerror="true"
+ 			output="build/version.txt" />
+-		<ivy:loadversion property="lombok.patcher.version" file="build/version.txt" />
+ 		<echo level="info">Lombok patcher version: ${lombok.patcher.version}</echo>
+ 	</target>
+ 	
